@@ -2,30 +2,15 @@
 <html>
   <head>
     <title>PLP@PACL by Dan Lou</title>
-<!-- 
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
     <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>  
-  
- -->
-     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
-    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-  
- </head>
+  </head>
   <body style="margin:0px; overflow:hidden;">
-<!--     <a-scene embedded arjs>       -->
-    <a-scene>
-    <a-marker-camera preset='hiro'><!-- use your gltf model -->
-    </a-marker-camera>    
-
- 
-<!--     <a-camera position="0 0 4"></a-camera> -->
+    <a-scene embedded arjs>      
     <!-- create your content here. just a box for now -->
-    
-      <a-text value="PLP 2018"></a-text>
+     <a-text value="PLP 2018"></a-text>
       <a-sky></a-sky>
       <a-entity id="object-container" position="0 1.6 -2" scale=".4 .4 .4"></a-entity>
       <a-light type="ambient" intensity="0.7" color="#ffffff"></a-light>
@@ -39,12 +24,10 @@
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
      <a-sky color="#ECECEC"></a-sky> 
  -->   
-<!-- 
      <a-assets>
       <a-asset-item id="book" src="medieval_fantasy_book/scene.gltf" ></a-asset-item>
     </a-assets>
-    <a-gltf-model src="#book" scale="0.01 0.01 0.01"></a-gltf-model>
- -->
+    <a-gltf-model src="#book" scale="0.03 0.03 0.03"></a-gltf-model>
 
 <!-- 
      <a-assets>
@@ -53,10 +36,9 @@
     <a-gltf-model src="#book" scale="0.01 0.01 0.01"></a-gltf-model>
  -->
     <!-- define a camera which will move according to the marker position -->
-
-    </a-scene>
-
-   <script type="text/javascript" src="app.js"></script>   
+    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+    </a-marker-camera>
     
+    </a-scene>
   </body>
 </html>
