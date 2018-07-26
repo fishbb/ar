@@ -4,8 +4,6 @@
     <title>PLP@PACL by Dan Lou</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="aframe-ar.js"></script>
-    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>  
   </head>
   <body style="margin:0px; overflow:hidden;">
     <a-scene embedded arjs>      
@@ -18,17 +16,18 @@
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
      <a-sky color="#ECECEC"></a-sky> 
  -->   
+<!-- 
      <a-assets>
       <a-asset-item id="book" src="medieval_fantasy_book/scene.gltf" ></a-asset-item>
     </a-assets>
     <a-gltf-model src="#book" scale="0.03 0.03 0.03"></a-gltf-model>
+ -->
 
-<!-- 
-     <a-assets>
+    <a-assets>
       <a-asset-item id="book" src="buster_drone/scene.gltf" ></a-asset-item>
     </a-assets>
-    <a-gltf-model src="#book" scale="0.01 0.01 0.01"></a-gltf-model>
- -->
+    <a-gltf-model src="#book" scale="0.007 0.007 0.007"></a-gltf-model>
+
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'><!-- use your gltf model -->
     </a-marker-camera>
