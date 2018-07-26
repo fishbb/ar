@@ -19,12 +19,12 @@
     <a-assets>
       <a-asset-item id="book" src="medieval_fantasy_book/scene.gltf" ></a-asset-item>
     </a-assets>
-    <!-- use your gltf model -->
-    <a-gltf-model src="#book" scale="0.1 0.1 0.1"></a-gltf-model>
+    
 
 <!--     <a-gltf-model src="buster_drone/scene.gltf"></a-gltf-model> -->
     <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+    <a-gltf-model src="#book" scale="0.05 0.05 0.05"></a-gltf-model></a-marker-camera>
     
     </a-scene>
   </body>
