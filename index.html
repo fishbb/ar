@@ -3,7 +3,7 @@
   <head>
     <title>PLP@PACL by Dan Lou</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="aframe-ar.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin:0px; overflow:hidden;">
     <a-scene embedded arjs>      
@@ -19,7 +19,7 @@
     <a-assets>
       <a-asset-item id="book" src="buster_drone/scene.gltf" ></a-asset-item>
     </a-assets>
-    <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0 0 -4' rotation="0 45 45" scale="2 2 2"></a-gltf-model>
+    <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0 0 -4' rotation="0 45 45"></a-gltf-model>
 
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'><!-- use your gltf model -->
