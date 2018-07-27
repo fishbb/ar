@@ -14,18 +14,16 @@
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
      <a-sky color="#ECECEC"></a-sky> 
  -->   
-
+   <a-assets>
+    <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+<!-- 
+    <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+    <a-asset-item id="book" src="buster_drone/scene.gltf" ></a-asset-item>       -->
+  </a-assets>
 
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'><!-- use your gltf model -->
-
-       <a-assets>
-        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-<!-- 
-        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-        <a-asset-item id="book" src="buster_drone/scene.gltf" ></a-asset-item>       -->
-      </a-assets>
       
       <a-box position="0 0 0.5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
