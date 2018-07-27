@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PLP@PACL by Dan Lou</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin:0px; overflow:hidden;">
+    <a-scene embedded arjs>      
+    <!-- create your content here. just a box for now -->
+ 
+       <a-assets>
+        <a-asset-item id="book" src="buster_drone/scene.gltf" ></a-asset-item> 
+      </a-assets>
+      
+      <a-text value="PLP 2018" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+     
+      <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0.5 0.5 0'> -->
+    </a-gltf-model>
+
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+    </a-marker-camera>
+    
+    </a-scene>
+  </body>
+</html>
