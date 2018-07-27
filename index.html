@@ -14,6 +14,11 @@
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
      <a-sky color="#ECECEC"></a-sky> 
  -->   
+
+
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+
        <a-assets>
         <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
 <!-- 
@@ -33,13 +38,12 @@
 <!--       <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky> -->
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
-<!--       <a-plane position="0 0 0" rotation="-90 0 0" height="100" width="100"></a-plane> -->
+      <a-plane position="0 0 0" rotation="-90 0 0" height="100" width="100"></a-plane>
       <a-text value="PLP 2018" color="#BBB" position="-0.9 0.2 1" scale="1.5 1.5 1.5"></a-text>
      
-<!--       <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0.5 0.5 0'></a-gltf-model>-->
-
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'><!-- use your gltf model --></a-marker-camera>
+<!--       <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0.5 0.5 0'></a-gltf-model>-->    
+    
+    </a-marker-camera>
     
     </a-scene>
   </body>
