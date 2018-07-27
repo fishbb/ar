@@ -26,8 +26,10 @@
     <a-marker-camera preset='hiro'><!-- use your gltf model -->
       
       <a-box position="0 0 0" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+<!-- 
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 0.2 -5"></a-animation>
+ -->
         <a-animation attribute="rotation" begin="2000" dur="2000" to="360 405 45"></a-animation>
         <a-animation attribute="scale" begin="3000" dur="300" to="2.3 2.3 2.3"></a-animation>
         <a-animation attribute="scale" begin="3500" dur="300" to="2 2 2"></a-animation>
@@ -37,7 +39,7 @@
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
 <!--       <a-plane position="0 0 0" rotation="-90 0 0" height="100" width="100"></a-plane> -->
-      <a-text value="PLP 2018" color="#BBB" position="0 -1 -1" scale="1.5 1.5 1.5"></a-text>
+      <a-text value="PLP 2018" color="#BBB" position="0 1 1" scale="1.5 1.5 1.5"></a-text>
      
 <!--       <a-gltf-model src="#book" scale="0.007 0.007 0.007" position='0.5 0.5 0'></a-gltf-model>-->    
     
