@@ -16,13 +16,11 @@
 
       <!-- define a camera which will move according to the marker position -->
       <a-marker-camera preset='hiro'>
-          <a-text value="PLP 2018" color="#BBB" position="-0.6 0 1" scale="1.5 1.5 1.5" rotation="120 0 0"></a-text>
+          <a-text value="PLP 2018" color="#BBB" position="-0.6 -1 1" scale="1.5 1.5 1.5" rotation="120 0 0"></a-text>
           <!-- use your gltf model -->
 
-          <a-gltf-model src="#book" scale="0.008 0.008 0.008" position='0 0 0' rotation="60 0 0">
-                  <a-animation attribute="rotation" delay="1000" dur="2000" to="360 360 0"></a-animation>
-          </a-gltf-model>
-            
+<!--           <a-gltf-model src="#book" scale="0.008 0.008 0.008" position='0 0 0' rotation="60 0 0"></a-gltf-model> -->
+          <a-entity gltf-model="#book" animation-mixer></a-entity>  
       </a-marker-camera>
     </a-scene>
   </body>
