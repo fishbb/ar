@@ -9,14 +9,21 @@
   <body style="margin:0px; overflow:hidden;">
   
   <a-scene embedded arjs>
+  
+      <!-- create your content here. just a box for now -->
+ 
+       <a-assets>
+        <a-asset-item id="book" src="https://fishbb.github.io/ar/medieval_fantasy_book/scene.gltf" ></a-asset-item> 
+      </a-assets>
+  
         <a-gltf-model src="#book" scale="0.04 0.04 0.04" position='0 0 -2' rotation="0 0 0" animation-mixer shadow="receive: false; cast:true;"></a-gltf-model>
         <a-light type="ambient"  color="#445451"></a-light>
-        <a-light type="point" intensity="2" position="0.5 1.5 0"></a-light>
+        <a-light type="point" intensity="2" position="0.5 1 0"></a-light>
 
-        <a-cylinder position="-0.1 0.75 -2.5" radius="0.1" height="1" color="#001a00"></a-cylinder>
+        <a-cylinder position="-0.1 0.25 -3" radius="0.1" height="1" color="#001a00"></a-cylinder>
 
-        <a-box position="-0.1 1.5 -3" rotation="0 0 0" width="1.5" height="0.5" depth="1" color="#001a00"></a-box>
-        <a-text value="PLP 2018" color="#BBB" position="-0.55 1.5 -2" scale="1 1 1"></a-text>
+        <a-box position="-0.1 0.75 -3" rotation="0 0 0" width="1.5" height="0.5" depth="0.5" color="#001a00"></a-box>
+        <a-text value="PLP 2018" color="#BBB" position="-0.55 0.75 -3" scale="1 1 1"></a-text>
       </a-marker-camera>
   
   </a-scene>

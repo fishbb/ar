@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PLP@PACL by Dan Lou</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://fishbb.github.io/ar/aframe-ar.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  </head>
+  <body style="margin:0px; overflow:hidden;">
+    <a-scene embedded arjs>      
+    <!-- create your content here. just a box for now --> 
+    
+      <a-assets>
+        <img id="underwater-texture" src="diamond/underwater3.jpg" crossorigin="anonymous">
+        <a-assets-item id="diamond-obj" src="diamond/diamond.obj" />
+      </a-assets>
+
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+      
+<!-- 
+      <a-box position="0 0 0" rotation="0 45 45" scale="1 1 1" src="#boxTexture">
+        <a-animation attribute="rotation" delay="2000" dur="2000" to="360 405 45"></a-animation>
+        <a-animation attribute="scale" delay="3000" dur="300" to="1.3 1.3 1.3"></a-animation>
+        <a-animation attribute="scale" delay="3500" dur="300" to="0.5 0.5 0.5"></a-animation>
+      </a-box>
+ -->
+
+      <a-entity light="angle:45;type:spot;castShadow:true"
+                position="0 1.873 0"></a-entity>
+      <a-text value="PLP 2018" color="#e99787" position="-0.6 2 -2" scale="2 2 2" font="kelsonsans"></a-text>     
+
+    </a-marker-camera>
+    
+    </a-scene>
+    
+    <script type="text/babel">
+        const scene = document.querySelector('a-scene');
+        const diamonds = [];
+
+        for (let i = 0; i < 30; i++) {
+          const diamondSize = Math.random() * .02 + .01;
+          const xRotation = Math.random() * 45;
+          const zRotation = Math.random() * 45;
+          const diamond = document.createElement('a-entity');
+          diamond.setAttribute('obj-model', 'obj:#diamond-obj');
+          diamond.setAttribute('scale', {x: diamondSize, y: diamondSize, z: diamondSize});
+          diamond.setAttribute('shadow', '')
+          diamond.setAttribute('material', {
+            sphericalEnvMap: '#underwater-texture',
+            roughness: 0,
+            metalness: .8
+          });
+
+          const animation = document.createElement('a-animation');
+          animation.setAttribute('attribute', 'rotation');
+          animation.setAttribute('from', `${xRotation} 0 ${zRotation}`);
+          animation.setAttribute('to', `${xRotation} 360 ${zRotation}`);
+          animation.setAttribute('dur', Math.random() * 5000 + 5000);
+          animation.setAttribute('easing', 'linear');
+          animation.setAttribute('repeat', 'indefinite');
+
+          diamond.appendChild(animation);
+          scene.appendChild(diamond);
+
+          diamonds.push(diamond);
+        }
+
+        function getRandomPositon() {
+          return {
+            x: Math.random() * 4 - 2, 
+            y: Math.random() * 2 + 4,
+            z: Math.random() * -2 - 1
+          }
+        }
+
+        function render() {
+          diamonds.forEach(diamond => {
+            if (!diamond.getAttribute('position')) {
+              diamond.setAttribute('data-velocity', Math.random() * .05);
+              diamond.setAttribute('position', getRandomPositon());
+            } else {
+              const {x, y, z} = diamond.getAttribute('position');
+              const velocity = parseFloat(diamond.getAttribute('data-velocity'));
+      
+              if (y < -3) {
+                diamond.setAttribute('position', getRandomPositon());
+              } else {
+                diamond.setAttribute('position', {x, y: y - velocity, z})
+              }
+            }
+          });
+  
+          requestAnimationFrame(render);
+        }
+
+        render();
+
+    </script>
+    
+  </body>
+</html>
