@@ -4,7 +4,6 @@
     <title>PLP@PACL by Dan Lou</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://fishbb.github.io/ar/aframe-ar.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script>
       AFRAME.registerComponent('wireframe', {
         dependencies: ['material'],
@@ -18,7 +17,9 @@
 
     <a-scene embedded arjs>  
     
-        <a-marker-camera preset='hiro'><!-- use your gltf model -->    
+        <a-marker-camera preset='hiro'>
+        
+        <!-- use your gltf model -->    
       
           <a-torus-knot position="0 0 -4" rotation="-90 45 0" material="color:#336633" wireframe>
             <a-animation easing="linear" attribute="rotation" repeat="indefinite" dur="13000" to="0 405 0"></a-animation>
