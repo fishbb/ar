@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>PLP@PACL by Dan Lou</title>
-<!--     <script src="https://fishbb.github.io/ar/aframe-ar.js"></script> -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-  </head>
-  <body style="margin:0px; overflow:hidden;">
-<!--     <a-scene embedded arjs>       -->
-    <a-scene>
-    <!-- create your content here. just a box for now --> 
-    
-      <a-assets>
-        <img id="underwater-texture" src="diamond/underwater3.jpg" crossorigin="anonymous">
-        <a-assets-item id="diamond-obj" src="diamond/diamond.obj" />
-      </a-assets>
-
-    <!-- define a camera which will move according to the marker position -->
-<!--     <a-marker-camera preset='hiro'><!~~ use your gltf model ~~> -->
-      
-<!-- 
-      <a-box position="0 0 0" rotation="0 45 45" scale="1 1 1" src="#boxTexture">
-        <a-animation easing="linear" attribute="rotation" repeat="indefinite" dur="13000" to="0 405 0"></a-animation>
-      </a-box>
- -->
-
-      <a-entity light="angle:45;type:spot;castShadow:true"
-                position="0 1.873 0"></a-entity>
-      <a-text value="PLP 2018" color="#e99787" position="-0.6 2 -2" scale="1 1 1" font="kelsonsans"></a-text>     
-
-<!--     </a-marker-camera> -->
-    
-    </a-scene>
-    
-    <script type="text/babel">
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<a-scene>
+  <a-assets>
+    <img id="underwater-texture" src="https://fishbb.github.io/ar/diamond/underwater3.jpg" crossorigin="anonymous">
+    <a-assets-item id="diamond-obj" src="https://fishbb.github.io/ar/diamond/diamond.obj" />
+  </a-assets>
+  <a-entity light="angle:45;type:spot;castShadow:true"
+            position="0 1.873 0"></a-entity>
+      <a-text value="PLP 2018" color="#e99787" position="-0.6 2 -2" scale="2 2 2" font="kelsonsans"></a-text> 
+          <a-entity gltf-model="#scene" scale="0.02 0.02 0.02" position='0 0 -2' rotation="0 0 0" ></a-entity> 
+  
+  
+</a-scene>
+  <script type="text/babel">
         const scene = document.querySelector('a-scene');
         const diamonds = [];
 
@@ -96,6 +81,5 @@
         render();
 
     </script>
-    
-  </body>
+
 </html>
