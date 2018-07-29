@@ -11,19 +11,19 @@
     <!-- create your content here. just a box for now -->
  
        <a-assets>
-        <a-asset-item id="drone" src="https://fishbb.github.io/ar/buster_drone/scene.gltf" ></a-asset-item> 
+        <a-asset-item id="drone" src="buster_drone/scene.gltf" ></a-asset-item> 
       </a-assets>
       
 
       <!-- define a camera which will move according to the marker position -->
       <a-marker-camera preset='hiro'>
-          <a-entity gltf-model="#drone" scale="0.02 0.02 0.02" position='0 0 -2' rotation="0 0 0" ></a-entity> 
+          <a-entity gltf-model="#drone" scale="0.02 0.02 0.02" position='0 0 -3' rotation="0 0 0" ></a-entity> 
           <a-light type="point" intensity="2" position="0 0 0"></a-light>
           
 <!--           <a-cylinder position="1 0 -3" radius="0.1" height="1" color="#262626"></a-cylinder> -->
 
 <!--           <a-box position="0.85 0.5 -3" rotation="0 0 0" width="1.5" height="0.5" depth="0" color="#262626"></a-box> -->
-          <a-text value="PLP 2018" color="#000" position="-0.5 0.7 -2" scale="1 1 1" rotation="-90 0 0"></a-text> 
+          <a-text value="PLP 2018" color="#000" position="-0.5 0.7 -3" scale="1 1 1" rotation="-90 0 0"></a-text> 
       </a-marker-camera>
     </a-scene>
   </body>
