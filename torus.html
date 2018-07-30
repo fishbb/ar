@@ -16,11 +16,11 @@
   </head>
   <body style="margin:0px; overflow:hidden;">
 
-    <a-scene embedded arjs>  
+    <a-scene embedded arjs='sourceType: webcam;'>  
        <a-assets>
         <a-asset-item id="logo" src="leaf/scene.gltf" ></a-asset-item> 
       </a-assets>    
-        <a-marker-camera preset='hiro'>
+        <a-marker preset='hiro'>
         
         <!-- use your gltf model -->    
       
@@ -31,7 +31,8 @@
         <a-text value="PLP 2018" color="#e99787" position="-0.4 1 -2" scale="1 1 1" font="kelsonsans" rotation="-90 0 0"></a-text>     
          <a-text value="AR By Dan Lou" color="#000" position="0.5 -0.5 -2" scale="0.4 0.4 0.4" rotation="-90 0 0"></a-text> 
     
-    </a-marker-camera>
+    </a-marker>
+      <a-entity camera></a-entity> 
     
     </a-scene>
     

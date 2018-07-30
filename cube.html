@@ -7,7 +7,7 @@
     <script src="https://fishbb.github.io/ar/aframe-ar.js"></script>
   </head>
   <body style="margin:0px; overflow:hidden;">
-    <a-scene embedded arjs>      
+    <a-scene embedded arjs='sourceType: webcam;'>  
     <!-- create your content here. just a box for now --> 
     
       <a-assets>
@@ -15,7 +15,7 @@
         <a-asset-item id="logo" src="leaf/scene.gltf" ></a-asset-item> 
       </a-assets>
     <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'><!-- use your gltf model -->
+    <a-marker preset='hiro'><!-- use your gltf model -->
       
       <a-box position="0 0 -2" rotation="0 45 45" scale="1 1 1" src="#underwater-texture">
         <a-animation easing="linear" attribute="rotation" repeat="indefinite" dur="13000" to="0 405 0"></a-animation>
@@ -23,7 +23,8 @@
       <a-entity gltf-model="#logo" scale="3 3 3" position='-0.6 1 -2' rotation="0 0 0"></a-entity>     
       <a-text value="PLP 2018" color="#e99787" position="-0.6 1.4 -2" scale="1 1 1" font="kelsonsans" rotation="-90 0 0"></a-text>     
       <a-text value="AR By Dan Lou" color="#000" position="1 -3 -3" scale="0.4 0.4 0.4" rotation="-90 0 0"></a-text> 
-    </a-marker-camera>
+    </a-marker>
+      <a-entity camera></a-entity> 
     
     </a-scene>
     
