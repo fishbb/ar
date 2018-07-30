@@ -5660,10 +5660,9 @@ ARjs.Profile.prototype.reset = function () {
 	}
 	this.defaultMarkerParameters = {
 		type : 'pattern',
-// 		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
-// 		changeMatrixMode: 'modelViewMatrix',
-        patternUrl : THREEx.ArToolkitContext.danlouURL + 'marker/robot.patt'
-// 		changeMatrixMode: 'modelViewMatrix',
+		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
+		changeMatrixMode: 'modelViewMatrix',
+//         patternUrl : THREEx.ArToolkitContext.danlouURL + 'marker/robot.patt'
 	}
 	return this
 };
