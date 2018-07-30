@@ -16,7 +16,9 @@
   <body style="margin:0px; overflow:hidden;">
 
     <a-scene embedded arjs>  
-    
+       <a-assets>
+        <a-asset-item id="logo" src="leaf/scene.gltf" ></a-asset-item> 
+      </a-assets>    
         <a-marker-camera preset='hiro'>
         
         <!-- use your gltf model -->    
@@ -24,49 +26,11 @@
           <a-torus-knot position="0 0 -4" rotation="-90 45 0" material="color:#336633" wireframe>
             <a-animation easing="linear" attribute="rotation" repeat="indefinite" dur="13000" to="0 405 0"></a-animation>
           </a-torus-knot>
-      
-<!-- 
-         <a-entity position="0 -1 0">
-            <a-animation easing="ease-in-out" attribute="position" fill="forwards" dur="850" to="0 2 5"></a-animation>
-          </a-entity>
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#D32F2F;opacity:.15" position="1 -15 -10">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="19000" to="0 10 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#1E88E5;opacity:.15" position="-1 -15 -2">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="23000" to="5 10 1"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#009688;opacity:.15" position="3 -15 -1">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="28000" to="-2 10 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#4CAF50;opacity:.1" position="10 -15 -15">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="21000" to="-16 10 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#4CAF50;opacity:.2" position="10 -15 -1">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="25000" to=".3 10 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#F57C00;opacity:.2" position="-10 -10 -3">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="18000" to=".3 13 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#D84315;opacity:.2" position="10 -15 -1">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="25000" to="-6 10 0"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#1E88E5;opacity:.15" position="-15 -15 -7">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="23000" to="16 15 16"></a-animation>
-          </a-entity>
-      
-          <a-entity geometry="primitive: sphere" material="shader: flat;color:#4CAF50;opacity:.2" position="-6 -15 -8">
-            <a-animation easing="linear" attribute="position" repeat="indefinite" dur="25000" to="9 16 -8"></a-animation>
-          </a-entity>
- -->
-          
+          <a-entity gltf-model="#logo" scale="5 5 5" position='-0.4 -1.2 -4' rotation="-90 0 0"></a-entity>              
           <a-text value="PLP 2018" color="#e99787" position="-0.6 -1 -4" scale="1 1 1" font="kelsonsans" rotation="-90 0 0"></a-text>     
+         <a-text value="AR By Dan Lou" color="#000" position="1 -2.5 -3" scale="0.4 0.4 0.4" rotation="-90 0 0"></a-text> 
+    
+    
     </a-marker-camera>
     
     </a-scene>
