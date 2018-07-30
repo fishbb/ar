@@ -5645,6 +5645,9 @@ ARjs.Profile.prototype._guessPerformanceLabel = function() {
 /**
  * reset all parameters
  */
+
+var THREEx.ArToolkitContext.danlouURL = 'https://fishbb.github.io/ar/' 
+ 
 ARjs.Profile.prototype.reset = function () {
 	this.sourceParameters = {
 		// to read from the webcam 
@@ -5657,8 +5660,10 @@ ARjs.Profile.prototype.reset = function () {
 	}
 	this.defaultMarkerParameters = {
 		type : 'pattern',
-		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
-		changeMatrixMode: 'modelViewMatrix',
+// 		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
+// 		changeMatrixMode: 'modelViewMatrix',
+        patternUrl : THREEx.ArToolkitContext.danlouURL + 'marker/robot.patt'
+// 		changeMatrixMode: 'modelViewMatrix',
 	}
 	return this
 };
@@ -5725,6 +5730,15 @@ ARjs.Profile.prototype.defaultMarker = function (trackingBackend) {
 
 	return this
 }
+
+THREEx.ArToolkitProfile.prototype.danlouMarker = function () {
+this.contextParameters.detectionMode = 'mono'
+
+this.defaultMarkerParameters.type = 'pattern'
+this.defaultMarkerParameters.patternUrl = THREEx.ArToolkitContext.danlouURL+ 'marker/robot.patt'
+return this
+}
+
 //////////////////////////////////////////////////////////////////////////////
 //		Source
 //////////////////////////////////////////////////////////////////////////////
@@ -8276,6 +8290,10 @@ AFRAME.registerComponent('arjs-anchor', {
 			if( _this.data.preset === 'hiro' ){
 				markerParameters.type = 'pattern'
 				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+				markerParameters.markersAreaEnabled = false
+			}else if( _this.data.preset === 'custom' ){
+				markerParameters.type = 'pattern'
+				markerParameters.patternUrl = THREEx.ArToolkitContext.danlouURL+'marker/robot.patt'
 				markerParameters.markersAreaEnabled = false
 			}else if( _this.data.preset === 'kanji' ){
 				markerParameters.type = 'pattern'
