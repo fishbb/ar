@@ -13,7 +13,7 @@
  
        <a-assets>
         <a-asset-item id="logo" src="leaf/leaf_plp.gltf" ></a-asset-item> 
-        <a-asset-item id="sign" src="signature/leaf_plp.gltf" ></a-asset-item>
+<!--         <a-asset-item id="sign" src="signature/leaf_plp.gltf" ></a-asset-item> -->
       </a-assets>
       
 
@@ -24,14 +24,13 @@
             <a-animation easing="linear" attribute="scale" begin="0" dur="1000" from="0 0 0" to="5 5 5"></a-animation>                  
             <a-animation easing="linear" attribute="rotation" begin="1000" repeat="indefinite" dur="16000" to="360 0 0"></a-animation>         
          </a-entity>
-         
-         <a-entity gltf-model="#sign" scale="5 5 5" position='1 -2.5 -1' rotation="0 0 0">
-            <a-animation easing="linear" attribute="scale" begin="0" dur="1000" from="0 0 0" to="5 5 5"></a-animation>                  
-            <a-animation easing="linear" attribute="rotation" begin="1000" repeat="indefinite" dur="16000" to="360 0 0"></a-animation>         
-         </a-entity>         
          <a-light type="ambient"  color="#445451"></a-light>
          <a-light type="point" intensity="2" position="0.5 1 0"></a-light>
-
+  
+    
+         <a-text value="AR By Dan Lou" color="#000" position="1 -2.5 -1" scale="0.4 0.4 0.4" rotation="-90 0 0">
+           <a-animation easing="linear" attribute="scale" begin="0" dur="16000" from="0 0 0" to="0.4 0.4 0.4"></a-animation>                  
+         </a-text> 
 
       </a-marker>   
       <a-entity camera></a-entity> 
