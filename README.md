@@ -6,5 +6,9 @@ Anyone with a camera-enabled browser will be able to enjoy mixed reality here.
 
 ## How to use this?
 
-1. Open the [marker](https://fishbb.github.io/ar/marker/robot_marker.png) on a device. Or print it out. 
-2. Open the link on your mobile device using a browser. Enable your browser to use camera. Pointing to the marker and you will see a 3D object floating above the marker. 
+| Open URL on one device                                       | Open Marker on separate device                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Scan the QR code or Open **https://git.io/fNxOo** on a separate mobile device. | Open the following marker on one device. Or print it out.    |
+| <img src="./marker/qrcode.png" width=250px>                  | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
+
+Enable your browser to use camera, then pointing to the marker. You will see a 3D object floating above the marker. 
