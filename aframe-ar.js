@@ -6680,10 +6680,10 @@ ARjs.SessionDebugUI = function(arSession, tangoPointCloud){
 	//		current-tracking-backend
 	//////////////////////////////////////////////////////////////////////////////
 
-	var domElement = document.createElement('span')
-	domElement.style.display = 'block'
-	this.domElement.appendChild(domElement)
-	domElement.innerHTML = '<b>trackingBackend</b> : ' +trackingBackend
+// 	var domElement = document.createElement('span')
+// 	domElement.style.display = 'block'
+// 	this.domElement.appendChild(domElement)
+// 	domElement.innerHTML = '<b>trackingBackend</b> : ' +trackingBackend
 	
 	//////////////////////////////////////////////////////////////////////////////
 	//		augmented-websites
