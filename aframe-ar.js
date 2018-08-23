@@ -8198,6 +8198,22 @@ ARjs.MarkersAreaUtils.buildMarkersAreaFileFromResolution = function(trackingBack
 	}
 }
 //////////////////////////////////////////////////////////////////////////////
+//		sound handler
+//////////////////////////////////////////////////////////////////////////////
+// register our component
+AFRAME.registerComponent('soundhandler', {
+    tick: function () {
+           var entity = document.querySelector('[sound]');
+         if (document.querySelector('a-marker').object3D.visible == true) {
+            entity.components.sound.playSound();
+        } else {
+            entity.components.sound.pauseSound();
+        }
+
+     }
+});
+
+//////////////////////////////////////////////////////////////////////////////
 //		arjs-anchor
 //////////////////////////////////////////////////////////////////////////////
 AFRAME.registerComponent('arjs-anchor', {
@@ -8434,6 +8450,10 @@ AFRAME.registerPrimitive('a-marker-camera', AFRAME.utils.extendDeep({}, AFRAME.p
 		'markerhelpers': 'arjs-anchor.markerhelpers',
 	}
 }))
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////
 //		arjs-hit-testing
 //////////////////////////////////////////////////////////////////////////////
