@@ -14,6 +14,8 @@
        <a-assets>
         <a-asset-item id="r2d2" src="./r2d2/scene.gltf" ></a-asset-item> 
         <a-asset-item id="sign" src="./signature/sign.gltf" ></a-asset-item>
+        <audio id="sound" src="./r2d2/r2d2.mp3" preload="auto"></audio>
+
       </a-assets>
       
 
@@ -24,6 +26,9 @@
             <a-animation direction="alternate" easing="linear" attribute="rotation" repeat="indefinite" dur="10000" from="0 -30 0" to="0 30 0"></a-animation>                
 
          </a-entity>
+
+         <a-entity sound="src: #sound"></a-entity>        
+         
          
          <a-entity gltf-model="#sign" scale="5.5 5.5 5.5" position='1 1.5 -1' rotation="0 0 0">
             <a-animation easing="linear" attribute="scale" repeat="indefinite" dur="10000" from="0 0 0" to="5.5 5.5 5.5"></a-animation>                  
