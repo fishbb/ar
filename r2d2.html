@@ -41,6 +41,20 @@
       <a-entity sound="src: #sound" autoplay="false"></a-entity>
       <a-entity camera></a-entity> 
     </a-scene>
+
+<script>
+AFRAME.registerComponent('soundhandler', {
+    tick: function () {
+           var entity = document.querySelector('[sound]');
+         if (document.querySelector('a-marker').object3D.visible == true) {
+            entity.components.sound.playSound();
+        } else {
+            entity.components.sound.pauseSound();
+        }
+
+     }
+});
+</script>
     
   </body>
 </html>
