@@ -23,10 +23,12 @@
 <!--       <a-marker preset='hiro'> -->
 	    <a-marker preset='custom' type="pattern" url="marker/robot.patt">
 	    
-         <a-entity gltf-model="#r2d2" scale="7 7 7" position="0 0 0" rotation="-90 0 0" sound="src: #sound; autoplay: true; loop: true">
-            <a-animation direction="alternate" easing="linear" attribute="rotation" repeat="indefinite" dur="5000" from="0 -30 0" to="0 30 0"></a-animation>                
+      <a-entity rotation="-90 0 0">
+        <a-entity gltf-model="#r2d2" scale="7 7 7" position="0 0 0" rotation="0 0 0" sound="src: #sound; autoplay: true; loop: true">
+            <a-animation direction="alternate" easing="linear" attribute="rotation" repeat="indefinite" dur="5000" from="0 30 0" to="0 -30 0"></a-animation>                
 
          </a-entity>
+      </a-entity>
 
          
          <a-entity gltf-model="#sign" scale="5.5 5.5 5.5" position="1 0.5 0" rotation="0 0 0">
