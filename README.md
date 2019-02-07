@@ -25,3 +25,21 @@ Enable your browser to use camera, then pointing to the marker. You will see a 3
 | <img src="./marker/qrcode2.png" width=250px>                 | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
 
 Enable your browser to use camera, then pointing to the marker. You will see a 3D object floating above the marker. 
+
+## Available now in the distributed web
+
+The AR example is now available in the distributed web. It is shared on the blockchain through InterPlanetary File System (IPFS), which means it is part of the distributed web -- the more people store the file on the blockchain, the more accessible it becomes. 
+
+To experience AR in IPFS, follow the steps:
+
+1. Open the [marker](https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/robot_marker.png) on one device or print it out.
+2. Open **[https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/](https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/)** or its shortened url https://bit.ly/2t8qaWj in Chrome on a mobile device.
+
+### Share it!
+
+If you want to help supporting the accessibility of this example, please [install IPFS](https://ipfs.io/docs/install/) on your own computer and then run the following commands:
+
+```IPFS
+ipfs pin add QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH
+```
+
