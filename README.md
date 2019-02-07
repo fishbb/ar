@@ -2,7 +2,7 @@
 
 This project is realized by using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md) and [A-Frame](http://aframe.io/). AR.js is an open source and pure web solution for creating augmented reality in the web. It is standard and works with any mobile device with webgl and webrtc. A-Frame is a web framework for building virtual reality experiences. It works on Vive, Rift, desktop and mobile platforms.
 
-Anyone with a camera-enabled browser will be able to enjoy mixed reality here.
+Anyone with a camera-enabled browser will be able to enjoy mixed reality here. Plus, the examples are now available in the [distributed web](#available-now-in-the-distributed-web) now.
 
 ## How to use this?
 
@@ -37,7 +37,7 @@ To experience AR in IPFS, follow the steps:
 
 ### Share it!
 
-If you want to help supporting the accessibility of this example, please [install IPFS](https://ipfs.io/docs/install/) on your own computer and then run the following commands:
+If you want to help supporting the accessibility of this example, please [install IPFS](https://ipfs.io/docs/install/) and then run the following commands:
 
 ```IPFS
 ipfs pin add QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH
