@@ -24,7 +24,7 @@ Anyone with a camera-enabled browser will be able to enjoy mixed reality here. P
 
 1. Open **[https://bit.ly/2TXRkLu](https://bit.ly/2TXRkLu)** in Chrome on a mobile device. 
 2. Open the following marker on a separete device. Or print it out. 
- <a href="./marker/code4lib.png"><img src="./marker/code4lib.png" width="700px"></a> 
+ <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> 
 3. Enable your browser to use camera, then pointing to the marker. You will see a 3D object floating above the marker. 
 
 ## Available now in the distributed web
