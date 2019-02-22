@@ -10,8 +10,8 @@ Anyone with a camera-enabled browser will be able to enjoy mixed reality here. P
 
 | Open URL on one device                                       | Open Marker on a separate device                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Scan the QR code or Open **[https://bit.ly/2Nsf9YD](https://bit.ly/2Nsf9YD)** in Chrome on a mobile device. | Open the following marker on a separete device. Or print it out. |
-| <img src="./marker/qrcode.png" width=250px>                  | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
+| Open **[https://bit.ly/2Nsf9YD](https://bit.ly/2Nsf9YD)** in Chrome on a mobile device. | Open the following marker on a separete device. Or print it out. |
+|                                                              | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
 
 Enable your browser to use camera, then pointing to the marker. You will see a 3D object floating above the marker. 
 
@@ -21,8 +21,8 @@ Enable your browser to use camera, then pointing to the marker. You will see a 3
 
 | Open URL on one device                                       | Open Marker on a separate device                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Scan the QR code or Open **[https://bit.ly/2MCwhOT](https://bit.ly/2MCwhOT)** in Chrome on a mobile device. | Open the following marker on a separete device. Or print it out. |
-| <img src="./marker/qrcode2.png" width=250px>                 | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
+| **[https://bit.ly/2MCwhOT](https://bit.ly/2MCwhOT)** in Chrome on a mobile device. | Open the following marker on a separete device. Or print it out. |
+|                                                              | <a href="./marker/robot_marker.png"><img src="./marker/robot_marker.png" width="700px"></a> |
 
 Enable your browser to use camera, then pointing to the marker. You will see a 3D object floating above the marker. 
 
