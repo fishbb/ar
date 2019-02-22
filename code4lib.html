@@ -17,8 +17,9 @@
       <!-- define a camera which will move according to the marker position -->
       <!--       <a-marker preset='hiro'> -->        
 	  <a-marker preset='custom' type="pattern" url="marker/robot.patt">
-       
-      <a-text value="cdl" hight="1" color="#ab0808" position="-1 2 0" opacity="0.9" font="exo2bold"> 
+      
+      <a-entity rotation="90 0 0"> 
+      <a-text value="cdl" hight="0.5" color="#ab0808" position="0 0 0" opacity="0.9" font="exo2bold"> 
         <a-torus color="#43A367" arc="230" radius-tubular="0.05" rotation="0 15 70" position="-3 0 0">
         <a-animation direction="alternate" easing="linear" attribute="radius" repeat="0" dur="10000" from="0" to="0.5">
         </a-torus>
@@ -73,7 +74,7 @@
              <a-animation direction="alternate" easing="linear" attribute="rotation" repeat="0" dur="10000" from="90 30 0" to="90 0 0"></a-animation>                
          
          </a-entity> 
-            
+    </a-entity>        
       </a-marker>  
       <a-entity camera></a-entity>             
     </a-scene>
