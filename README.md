@@ -34,7 +34,7 @@ The AR example is now available in the distributed web. It is shared on the bloc
 To experience AR in IPFS, follow the steps:
 
 1. Open the [marker](https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/robot_marker.png) on one device or print it out.
-2. Open **[https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/](https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/)** or its shortened url https://bit.ly/2t8qaWj in Chrome on a mobile device.
+2. Open **[https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/](https://ipfs.io/ipfs/QmcMyhMoG6sotqQWuRrtXDGd7C2smwzKz6J5Ks1MXfkeYH/)** or its shortened url https://bit.ly/2WW2yl1 in Chrome on a mobile device.
 
 ### Share it!
 
