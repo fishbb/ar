@@ -27,23 +27,23 @@ var els = camaraEL.querySelectorAll('a-text');
 if (title.length > 0) {
     els[0].setAttribute('value', t_string);
     els[0].setAttribute('color', '#a8d0e6'); //F3D250  f76c6c
-    els[0].setAttribute('position',"-1 2 -7");
+    els[0].setAttribute('position',"0 2 -7");
 }
 if (author.length > 0) {
     els[1].setAttribute('value', a_string);
     els[1].setAttribute('color', '#a8d0e6'); //5DA2D5
-    els[1].setAttribute('position',"-1 1.2 -9");
+    els[1].setAttribute('position',"0 1.2 -9");
 }
 if (isbn.length > 0) {
     els[2].setAttribute('value', i_string);
     els[2].setAttribute('color', '#f76c6c');
-    els[2].setAttribute('position',"-1 0.4 -9");
+    els[2].setAttribute('position',"0 0.4 -9");
 }
 
 if (typeof(rating) == "undefined") {
     els[3].setAttribute('value', 'No rating information available.');
     els[3].setAttribute('color', '#f8e9a1');
-    els[3].setAttribute('position',"-1 5 0 -7"); 
+    els[3].setAttribute('position',"0 5 0 -7"); 
     var torusEl = document.createElement('a-torus-knot');
 //     torusEl.setAttribute('color', "#B84A39");
     torusEl.setAttribute('material-displacement', '');
@@ -62,7 +62,7 @@ if (typeof(rating) == "undefined") {
 else if (rating.length > 0) {
     els[3].setAttribute('value', r_string);
     els[3].setAttribute('color', '#f8e9a1');
-    els[3].setAttribute('position',"-1 0 -7"); 
+    els[3].setAttribute('position',"0 0 -7"); 
 }
 
 var last_pos = -0.5;
@@ -86,7 +86,7 @@ for (i = 0; i < rating - 1; i++) {
     sphereEl.setAttribute('radius', 0.1);
     sphereEl.setAttribute('material-displacement','');
     sphereEl.setAttribute('scale', '1 1 1');            
-    var x = -0.3 + i * 0.22;
+    var x = 0 + i * 0.22;
     var pos = x.toString().concat(" -0.5 -3");
     sphereEl.setAttribute('position',pos);
     last_pos = x;
