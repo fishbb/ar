@@ -93,51 +93,51 @@ $(function() {
                 function pruneText(text) {
                     return text.length > 30 ? text.substr(0, 30) : text;
                 }
-//                 var $deviceSelection = document.getElementById("deviceSelection");
-//                 while ($deviceSelection.firstChild) {
-//                     $deviceSelection.removeChild($deviceSelection.firstChild);
-//                 }
-//                 devices.forEach(function(device) {
-//                     var $option = document.createElement("option");
-//                     $option.value = device.deviceId || device.id;
-//                     $option.appendChild(document.createTextNode(pruneText(device.label || device.deviceId || device.id)));
-//                     $option.selected = streamLabel === device.label;
-//                     $deviceSelection.appendChild($option);
-//                 });
+                var $deviceSelection = document.getElementById("deviceSelection");
+                while ($deviceSelection.firstChild) {
+                    $deviceSelection.removeChild($deviceSelection.firstChild);
+                }
+                devices.forEach(function(device) {
+                    var $option = document.createElement("option");
+                    $option.value = device.deviceId || device.id;
+                    $option.appendChild(document.createTextNode(pruneText(device.label || device.deviceId || device.id)));
+                    $option.selected = streamLabel === device.label;
+                    $deviceSelection.appendChild($option);
+                });
             });
         },
         attachListeners: function() {
             var self = this;
 
             self.initCameraSelection();
-//             $(".controls").on("click", "button.stop", function(e) {
-//                 e.preventDefault();
-//                 Quagga.stop();
-//                 self._printCollectedResults();
-//             });
-// 
-//             $(".controls .reader-config-group").on("change", "input, select", function(e) {
-//                 e.preventDefault();
-//                 var $target = $(e.target),
-//                     value = $target.attr("type") === "checkbox" ? $target.prop("checked") : $target.val(),
-//                     name = $target.attr("name"),
-//                     state = self._convertNameToState(name);
-// 
-//                 console.log("Value of "+ state + " changed to " + value);
-//                 self.setState(state, value);
-//             });
+            $(".controls").on("click", "button.stop", function(e) {
+                e.preventDefault();
+                Quagga.stop();
+                self._printCollectedResults();
+            });
+
+            $(".controls .reader-config-group").on("change", "input, select", function(e) {
+                e.preventDefault();
+                var $target = $(e.target),
+                    value = $target.attr("type") === "checkbox" ? $target.prop("checked") : $target.val(),
+                    name = $target.attr("name"),
+                    state = self._convertNameToState(name);
+
+                console.log("Value of "+ state + " changed to " + value);
+                self.setState(state, value);
+            });
         },
         _printCollectedResults: function() {
-//             var results = resultCollector.getResults(),
-//                 $ul = $("#result_strip ul.collector");
-// 
-//             results.forEach(function(result) {
-//                 var $li = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
-// 
-//                 $li.find("img").attr("src", result.frame);
-//                 $li.find("h4.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
-//                 $ul.prepend($li);
-//             });
+            var results = resultCollector.getResults(),
+                $ul = $("#result_strip ul.collector");
+
+            results.forEach(function(result) {
+                var $li = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
+
+                $li.find("img").attr("src", result.frame);
+                $li.find("h4.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
+                $ul.prepend($li);
+            });
         },
         _accessByPath: function(obj, path, val) {
             var parts = path.split('.'),
@@ -194,6 +194,20 @@ $(function() {
             App.init();
         },
         inputMapper: {
+            inputStream: {
+                constraints: function(value){
+                    if (/^(\d+)x(\d+)$/.test(value)) {
+                        var values = value.split('x');
+                        return {
+                            width: {min: parseInt(values[0])},
+                            height: {min: parseInt(values[1])}
+                        };
+                    }
+                    return {
+                        deviceId: value
+                    };
+                }
+            },
             numOfWorkers: function(value) {
                 return parseInt(value);
             },
@@ -220,21 +234,14 @@ $(function() {
             inputStream: {
                 type : "LiveStream",
                 constraints: {
-                    width: window.innerWidth,
-                    height: window.innerHeight,
+                    height: h,
+                    width: w,
                     facingMode: "environment",
-                },
-                area: {
-                    top: "0%",
-                    right: "0%",
-                    left: "0%",
-                    bottom: "0%"
-                },
-                target: document.querySelector('#interactive')
+                }
             },
             locator: {
                 patchSize: "medium",
-                halfSample: false
+                halfSample: true
             },
             numOfWorkers: 2,
             frequency: 10,

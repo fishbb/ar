@@ -9,14 +9,24 @@
     <meta name="description" content="Based on QuaggaJS By Christoph Oberhofer." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <style>
+    #barcode-scanner video {
+      width: 100%;
+      height: auto;
+    }
+
+    #barcode-scanner video.drawingBuffer {
+      display: none;
+    }
+    </style>
 
   </head>
 
   <body>
   
-
+<div id="barcode-scanner">
       <div id="interactive" class="viewport"></div>
-      
+</div>      
 
     <script src="./isbn/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js" type="text/javascript"></script>
