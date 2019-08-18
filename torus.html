@@ -3,8 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>PLP@PACL by Dan Lou</title>
-    <script src="./aframe.min.js"></script>
-    <script src="./aframe-ar.js"></script>
+    <script src="./source/aframe.min.js"></script>
+    <script src="./source/aframe-ar.js"></script>
     <script>
       AFRAME.registerComponent('wireframe', {
         dependencies: ['material'],
@@ -18,7 +18,7 @@
 
     <a-scene embedded arjs='sourceType: webcam;'>  
        <a-assets>
-        <a-asset-item id="logo" src="leaf/scene.gltf" ></a-asset-item> 
+        <a-asset-item id="logo" src="./3d/leaf/scene.gltf" ></a-asset-item> 
       </a-assets>    
 <!--         <a-marker preset='hiro'> -->
 	    <a-marker preset='custom' type="pattern" url="marker/robot.patt">

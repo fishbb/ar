@@ -3,8 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>PLP@PACL by Dan Lou</title>
-    <script src="./aframe.min.js"></script>
-    <script src="./aframe-ar.js"></script>
+    <script src="./source/aframe.min.js"></script>
+    <script src="./source/aframe-ar.js"></script>
   </head>
   <body style="margin:0px; overflow:hidden;">
     <a-scene embedded arjs='sourceType: webcam;'>  
@@ -12,7 +12,7 @@
     
       <a-assets>
         <img id="underwater-texture" src="diamond/underwater3.jpg" crossorigin="anonymous">
-        <a-asset-item id="logo" src="leaf/scene.gltf" ></a-asset-item> 
+        <a-asset-item id="logo" src="./3d/leaf/scene.gltf" ></a-asset-item> 
       </a-assets>
     <!-- define a camera which will move according to the marker position -->
 <!--     <a-marker preset='hiro'><!~~ use your gltf model ~~> -->

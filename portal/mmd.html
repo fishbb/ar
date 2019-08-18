@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/kripken/ammo.js/dcab07bf0e7f2b4b64c01dc45da846344c8f50be/builds/ammo.js"></script>
+  <script src="https://cdn.rawgit.com/takahirox/aframe-outline/v1.1.1/build/aframe-outline.min.js"></script>
+  <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.3/build/a-mmd.min.js"></script>
+</head>
+
+<body>
+  <a-scene antialias="true" outline>
+    <a-entity position="0 10 20">
+      <a-camera></a-camera>
+    </a-entity>
+
+    <a-entity mmd="audio:./mmd/audios/wavefile_short.mp3;">
+      <a-entity mmd-model="model:./mmd/miku/miku_v2.pmd;
+                           vmd:./mmd/vmds/wavefile_v2.vmd;"></a-entity>
+    </a-entity>
+
+    <a-light type="ambient" color="#888"></a-light>
+    <a-light color="#AAA" distance="100" intensity="0.4" type="point"></a-light>
+  </a-scene>
+</body>
+</html>
