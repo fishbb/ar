@@ -40,7 +40,7 @@ if (isbn.length > 0) {
     els[2].setAttribute('position',"-2 0.1 -7");
 }
 
-if (typeof rating == 'number') {
+if (rating.length >0) {
     els[3].setAttribute('value', r_string);
     els[3].setAttribute('color', '#f8e9a1');
     els[3].setAttribute('position',"-1.5 -0.1 -5"); 
@@ -81,7 +81,7 @@ aniEl.addEventListener('loaded', function () {
   console.log('animation attached');
   }) 
 var i;
-for (i = 0; i < rating - 1; i++) { 
+for (i = 0; i <= rating - 1; i++) { 
     var sphereEl = document.createElement('a-sphere');
     sphereEl.setAttribute('id', 'box');
     sphereEl.setAttribute('radius', 0.1);
