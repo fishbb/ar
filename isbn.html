@@ -10,15 +10,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <style>
-    #barcode-scanner video {
+    #barcode-scanner video{
       width: 100%;
       height: 100%;
     }
+    
+    #barcode-scanner canvas{
+        display:none;
+    
+    }
 
-    #barcode-scanner video.drawingBuffer {
+    #barcode-scanner video.drawingBuffer  canvas.drawingBuffer{
       display: none;
     }
-    
+
     body {
      margin-top: 0; 
      margin-bottom:0; 
