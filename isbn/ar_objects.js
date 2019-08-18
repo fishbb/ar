@@ -46,9 +46,10 @@ if (rating.length >0) {
     els[3].setAttribute('position',"-1.5 -0.1 -5"); 
 }
 else {
-    els[3].setAttribute('value', 'No rating information available.');
-    els[3].setAttribute('color', '#f8e9a1');
-    els[3].setAttribute('position',"-1.5 -0.2 -5"); 
+    els[3].setAttribute('value', 'Rating: Unknown');
+    els[3].setAttribute('color', '#32CD32');
+    els[2].setAttribute('color', '#32CD32');
+    els[3].setAttribute('position',"-1.5 -0.2 -6"); 
     var torusEl = document.createElement('a-torus-knot');
 //     torusEl.setAttribute('color', "#B84A39");
     torusEl.setAttribute('material-displacement', '');
@@ -57,7 +58,7 @@ else {
     torusEl.setAttribute('q', "5");
     torusEl.setAttribute('radius', ".5");
     torusEl.setAttribute('radius-tubular', "0.05");
-    torusEl.setAttribute('position',"0 -1.5 -6"); 
+    torusEl.setAttribute('position',"-0.2 0.8 -8"); 
     torusEl.addEventListener('loaded', function () {
       console.log('torusEl attached');
       })     
