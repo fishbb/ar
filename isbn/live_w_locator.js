@@ -21,8 +21,8 @@ $(function() {
             return true;
         }
     });
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+    var w = window.outerWidth;
+    var h = window.outerHeight;
     
     var App = {
         init: function() {
