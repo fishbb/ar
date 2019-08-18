@@ -40,7 +40,12 @@ if (isbn.length > 0) {
     els[2].setAttribute('position',"-2 0.1 -7");
 }
 
-if (typeof(rating) === "undefined") {
+if (typeof rating == 'number') {
+    els[3].setAttribute('value', r_string);
+    els[3].setAttribute('color', '#f8e9a1');
+    els[3].setAttribute('position',"-1.5 -0.1 -5"); 
+}
+else {
     els[3].setAttribute('value', 'No rating information available.');
     els[3].setAttribute('color', '#f8e9a1');
     els[3].setAttribute('position',"-1.5 -0.2 -5"); 
@@ -59,11 +64,7 @@ if (typeof(rating) === "undefined") {
     camaraEL.appendChild(torusEl);  
     
 }
-else if (rating.length > 0) {
-    els[3].setAttribute('value', r_string);
-    els[3].setAttribute('color', '#f8e9a1');
-    els[3].setAttribute('position',"-1.5 -0.1 -5"); 
-}
+
 
 var last_pos = -0.5;
 var rating_decimal = (rating % 1) * 360;
