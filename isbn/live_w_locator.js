@@ -21,8 +21,26 @@ $(function() {
             return true;
         }
     });
-    var w = window.outerWidth;
-    var h = window.outerHeight;
+//     var w = window.innerWidth;
+//     var h = window.innerHeight;
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);    
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+       // you're in PORTRAIT mode
+       w = w;
+       h = h;
+    }
+
+    if (window.matchMedia("(orientation: landscape)").matches) {
+       // you're in LANDSCAPE mode
+       w = h;
+       h = w;
+    }
+
+//     var mobile = window.matchMedia( "(min-width: 400px) and (min-height: 800px)" );
+//     var tablet = window.matchMedia( "(min-width: 401px) and (max-width: 960px) and (min-height: 801px) and (max-height: 1024)" );
+//     var screen = window.matchMedia( "(min-width: 961px) and (min-height: 1024px)" );
     
     var App = {
         init: function() {
@@ -239,6 +257,7 @@ $(function() {
                     facingMode: "environment",
                 }
             },
+            
             locator: {
                 patchSize: "medium",
                 halfSample: true
