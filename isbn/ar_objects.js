@@ -18,25 +18,33 @@ var title = displayParam('title');
 var t_string = 'Title: '.concat(title);
 var author = displayParam('author');
 var a_string = 'by '.concat(author);
-var rating = displayParam('average_rating');
-var count = displayParam('rating_count');
-var r_string = 'Rating: '.concat(rating, " (", count, " ratings)");
+var rating = displayParam('average_rating') || '';
+var count = displayParam('rating_count') || '';
+var r_string = 'Rating: '.concat(rating, " (#", count, ")");
 var sceneEl = document.querySelector('a-scene');
 var camaraEL = sceneEl.querySelector('#camera');
 var els = camaraEL.querySelectorAll('a-text');
+var title_slices = [];
+
+for (i = 0; i < t_string.length / 30; i++) {
+    title_slices.push(t_string.slice(i * 30, i * 30 + 29))
+}
 if (title.length > 0) {
-    els[0].setAttribute('value', t_string);
-    els[0].setAttribute('color', '#a8d0e6'); //F3D250  f76c6c
-    els[0].setAttribute('position',"-1.5 0.5 -5");
+    var t = title_slices.join('\n');
+    var l = title_slices.length + 1;
+    var pos = "-2 ".concat(0.2*l.toString()).concat(" -7");
+    els[0].setAttribute('value', t);
+    els[0].setAttribute('color', '#ff6a00'); //F3D250  f76c6c
+    els[0].setAttribute('position',pos);
 }
 if (author.length > 0) {
     els[1].setAttribute('value', a_string);
-    els[1].setAttribute('color', '#a8d0e6'); //5DA2D5
+    els[1].setAttribute('color', '#f8e9a1'); //5DA2D5
     els[1].setAttribute('position',"-2 0.3 -7");
 }
 if (isbn.length > 0) {
     els[2].setAttribute('value', i_string);
-    els[2].setAttribute('color', '#f76c6c');
+    els[2].setAttribute('color', '#ff6a00');
     els[2].setAttribute('position',"-2 0.1 -7");
 }
 
