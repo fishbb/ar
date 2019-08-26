@@ -32,7 +32,7 @@ for (i = 0; i < t_string.length / 30; i++) {
 if (title.length > 0) {
     var t = title_slices.join('\n');
     var l = title_slices.length + 1;
-    var pos = "-2 ".concat(0.2*l.toString()).concat(" -7");
+    var pos = "-2 ".concat( (0.3 *l + 0.1).toString()).concat(" -7");
     els[0].setAttribute('value', t);
     els[0].setAttribute('color', '#ff6a00'); //F3D250  f76c6c
     els[0].setAttribute('position',pos);
@@ -40,7 +40,7 @@ if (title.length > 0) {
 if (author.length > 0) {
     els[1].setAttribute('value', a_string);
     els[1].setAttribute('color', '#f8e9a1'); //5DA2D5
-    els[1].setAttribute('position',"-2 0.3 -7");
+    els[1].setAttribute('position',"-2 0.4 -7");
 }
 if (isbn.length > 0) {
     els[2].setAttribute('value', i_string);
@@ -51,13 +51,13 @@ if (isbn.length > 0) {
 if (rating.length >0) {
     els[3].setAttribute('value', r_string);
     els[3].setAttribute('color', '#f8e9a1');
-    els[3].setAttribute('position',"-1.5 -0.1 -5"); 
+    els[3].setAttribute('position',"-1.45 -0.2 -5"); 
 }
 else {
     els[3].setAttribute('value', 'Rating: Unknown');
     els[3].setAttribute('color', '#32CD32');
     els[2].setAttribute('color', '#32CD32');
-    els[3].setAttribute('position',"-1.5 -0.2 -6"); 
+    els[3].setAttribute('position',"-1.5 -0.3 -6"); 
     var torusEl = document.createElement('a-torus-knot');
 //     torusEl.setAttribute('color', "#B84A39");
     torusEl.setAttribute('material-displacement', '');

@@ -23,8 +23,20 @@ $(function() {
         }
     });
     
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);    
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+       // you're in PORTRAIT mode
+       w = w;
+       h = h;
+    }
+
+    if (window.matchMedia("(orientation: landscape)").matches) {
+       // you're in LANDSCAPE mode
+       w = h;
+       h = w;
+    }
     
     var App = {
         init: function() {
@@ -96,17 +108,6 @@ $(function() {
                 function pruneText(text) {
                     return text.length > 30 ? text.substr(0, 30) : text;
                 }
-                var $deviceSelection = document.getElementById("deviceSelection");
-                while ($deviceSelection.firstChild) {
-                    $deviceSelection.removeChild($deviceSelection.firstChild);
-                }
-                devices.forEach(function(device) {
-                    var $option = document.createElement("option");
-                    $option.value = device.deviceId || device.id;
-                    $option.appendChild(document.createTextNode(pruneText(device.label || device.deviceId || device.id)));
-                    $option.selected = streamLabel === device.label;
-                    $deviceSelection.appendChild($option);
-                });
             });
         },
         attachListeners: function() {
